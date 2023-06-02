@@ -1,3 +1,13 @@
 ---
 title: "Proposal"
 ---
+
+# Motivation
+
+# Objective
+
+# Related works
+
+# Approach
+
+# Shiny App Prototype
