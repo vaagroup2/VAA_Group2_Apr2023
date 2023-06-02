@@ -1,5 +1,5 @@
 ---
-title: "Visual Analytic Project Group 2"
+title: "Vast Challenge 2023: Mini Challenge 2"
 about:
   template: jolla
   image: profile.jpg

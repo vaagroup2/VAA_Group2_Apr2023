@@ -2,7 +2,7 @@
 title: "About"
 ---
 
-About group members:
+## About **Visual Analytic Project Group 2** members:
 
 Chen Fangxian
 
