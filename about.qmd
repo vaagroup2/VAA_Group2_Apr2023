@@ -2,8 +2,10 @@
 title: "About"
 ---
 
-About this site
+About group members:
 
-```{r}
-1 + 1
-```
+Chen Fangxian
+
+Huynh Minh Phuong
+
+Dabbie Neo Wen Min
