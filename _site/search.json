@@ -2,9 +2,9 @@
   {
     "objectID": "index.html",
     "href": "index.html",
-    "title": "VAA_Group2_Apr2023",
+    "title": "Visual Analytic Project Group 2",
     "section": "",
-    "text": "This is a Quarto website.\nTo learn more about Quarto websites visit https://quarto.org/docs/websites.\n\n1 + 1\n\n[1] 2"
+    "text": "Vast Challenge 2023\nSeafood is one of the most extensively traded commodities in the global food market. Over one-third of the global population depends on fish and other types of seafood as their main source of protein, while approximately 520 million individuals derive their livelihoods from fishing or activities related to fishing.\nRegrettably, the issue of illegal, unreported, and unregulated fishing has emerged as a significant contributor to overfishing on a global scale. These illicit practices not only endanger delicate marine ecosystems but also jeopardize food security within coastal communities and overall regional stability. The illegal fishing trade is closely associated with organized crime, and the absence of regulatory oversight often leads to human rights violations during fishing operations.\nFishEye International, an impartial non-governmental organization, has the responsibility of comprehending the societal, political, and economic factors that propel the illicit fishing industry. Through several years of dedicated effort, they have gathered data with the aim of constructing a more inclusive understanding of this ever-changing menace.\nOur project aim to use some of the datasets provided by FishEye and apply visual analytics to identify companies that are possibly engaged in illegal, unreported, and unregulated (IUU) fishing.\nMore information can be found at the link: Mini-Challenge 2"
   },
   {
     "objectID": "about.html",
