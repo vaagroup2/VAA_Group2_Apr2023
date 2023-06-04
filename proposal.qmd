@@ -53,7 +53,7 @@ Based on the product services, we will filter out companies who are involved in 
 
 Ownership network: we can construct a graph with the firms as the nodes and the links as ownership relation. We expect to observe weakly connected component capturing the majority of corporations in the network as well as a bow-tie structure featuring smaller strongly connected component, which is of interest to us.
 
-![Example of a ownership graph (taken from Open Ownership)](q1.png){fig-align="center" width="566"}
+![Example of a ownership graph](q1.png){fig-align="center" width="566"}
 
 The above image is taken from [Open Ownership](https://www.openownership.org/en/news/connecting-beneficial-ownership-peps-and-sanctions-data-with-openscreening/).
 
