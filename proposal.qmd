@@ -10,11 +10,11 @@ FishEye International, a non-profit organization dedicated to combatting the sco
 
 The primary objective of our project is to employ this graph to detect irregularities that may indicate a company's involvement in IUU fishing.
 
-# Possible obstacle
+# Possible obstacles
 
-Big and unclean data:
+**Big and unclean data:** There are many missing values such as in role type as well as product services. In addition, high number of nodes and edges will lead to very complex graph and require proper filtering in order to visualize the graph relationship clearly without loss of information.
 
-Undirected graph: need to infer the relationship direction if needed
+**Undirected graph:** We need to infer the relationship direction if needed.
 
 # Approach and Shiny App Prototype
 
