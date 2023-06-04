@@ -13,20 +13,31 @@ The primary objective of our project is to employ this graph to detect irregular
 Dataset contains the knowledge graph with 27,622 nodes and 24,038 edges:
 
 **Node Attributes:**
-• type -- Type of node as defined above.
-• country -- Country associated with the entity. This can be a full country or a two-letter country
-code.
-• product_services -- Description of product services that the \"id\" node does.
-• revenue_omu -- Operating revenue of the \"id\" node in Oceanus Monetary Units.
-• id -- Identifier of the node is also the name of the entry.
-• role -- The subset of the \"type\" node, not in every node attribute.
+
+-   type -- Type of node as defined above.
+
+-   country -- Country associated with the entity. This can be a full country or a two-letter country
+    code.
+
+-   product_services -- Description of product services that the \"id\" node does.
+
+-   revenue_omu -- Operating revenue of the \"id\" node in Oceanus Monetary Units.
+
+-   id -- Identifier of the node is also the name of the entry.
+
+-   role -- The subset of the \"type\" node, not in every node attribute.
 
 **Edge Attributes:**
-• type -- Type of the edge as defined above.
-• source -- ID of the source node.
-• target -- ID of the target node.
-• dataset -- Always \"MC3\".
-• role - The subset of the \"type\" node, not in every edge attribute.
+
+-   type -- Type of the edge as defined above.
+
+-   source -- ID of the source node.
+
+-   target -- ID of the target node.
+
+-   dataset -- Always \"MC3\".
+
+-   role - The subset of the \"type\" node, not in every edge attribute.
 
 # Related works
 
