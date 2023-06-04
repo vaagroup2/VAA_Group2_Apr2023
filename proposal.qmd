@@ -42,6 +42,10 @@ Using the features such as product services, country, role/type and adjacency ma
 
 ![Heatmap of pairwise similarity score (e.g. cosine similarity)[@sadeghi2015]](q3.png){fig-align="center"}
 
+We can also use an interactive graph to visualize similarity clusters by similarity score
+
+![By adjusting the slider which indicate the different degree of cluster similarity score to view which nodes are more similar than the rest](slider.png){fig-align="center"}
+
 # Dataset
 
 Dataset contains the knowledge graph with 27,622 nodes and 24,038 edges:
