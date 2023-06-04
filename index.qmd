@@ -1,5 +1,5 @@
 ---
-title: "Vast Challenge 2023: Mini Challenge 2"
+title: "Vast Challenge 2023: Mini Challenge 3"
 about:
   template: jolla
   image: profile.jpg
@@ -19,4 +19,4 @@ FishEye International, an impartial non-governmental organization, has the respo
 
 Our project aim to use some of the datasets provided by FishEye and apply visual analytics to identify companies that are possibly engaged in illegal, unreported, and unregulated (IUU) fishing.
 
-More information can be found at the link: [Mini-Challenge 2](#0){style="font-size: 11pt;"}
+More information can be found at the link: [Mini Challenge 3: VAST challenge 2023](https://vast-challenge.github.io/2023/MC3.html)
