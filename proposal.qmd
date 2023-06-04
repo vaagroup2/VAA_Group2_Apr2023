@@ -1,6 +1,7 @@
 ---
 title: "Proposal: Vast Challenge 2023 - Mini Challenge 3"
 date: "04/06/2023"
+bibliography: references.bib
 ---
 
 # Motivation
@@ -8,6 +9,38 @@ date: "04/06/2023"
 FishEye International, a non-profit organization dedicated to combatting the scourge of illegal, unreported and unregulated (IUU) fishing, has been granted access to fishing-related companies' financial database, offered by an international finance corporation. Through their previous investigations, FishEye has discovered that companies with unusual arrangements are more likely to be engaged in IUU activities or other questionable practices. To leverage this valuable resource, FishEye has transformed the database into a comprehensive knowledge graph, which encompasses data on companies, owners, workers and revenue.
 
 The primary objective of our project is to employ this graph to detect irregularities that may indicate a company's involvement in IUU fishing.
+
+# Possible obstacle
+
+Big and unclean data:
+
+Undirected graph: need to infer the relationship direction if needed
+
+# Approach and Shiny App Prototype
+
+### Question 1: Use visual analytics to identify anomalies in the business groups present in the knowledge graph.
+
+Based on the product services, we will filter out companies who are involved in fishing related services. We can classify them into different business groups based on certain features and use network graph to plot the relationship of the entities (companies, beneficial owners, and workers) for each business type. Different centrality measures such as degree, betweenness and eigenvector centrality can be performed, from which an overall score to evaluate the importance of the node. The score could be used to determine the size of the node.
+
+![Main knowledge graph grouped by certain features](Q1.%20Network%20graph.png){fig-align="center" width="588"}
+
+Ownership network: we can construct a graph with the firms as the nodes and the links as ownership relation. We expect to observe weakly connected component capturing the majority of corporations in the network as well as a bow-tie structure featuring smaller strongly connected component, which is of interest to us. [@garcia-bernardo2017]
+
+![Example of a ownership graph](q1.png){fig-align="center" width="566"}
+
+The above image is taken from [Open Ownership](https://www.openownership.org/en/news/connecting-beneficial-ownership-peps-and-sanctions-data-with-openscreening/).
+
+### Question 2: Develop a visual analytics process to find similar businesses and group them. This analysis should focus on a business\'s most important features and present those features clearly to the user.
+
+We can perform community detection to identify clusters or groups with the knowledge graph for different business types. We could pick out the leader of the node in each community and plot its ego-network graph to see its activities with other companies.
+
+![View all or individual communities using side bar navigation](Question2.PNG){fig-align="center" width="597"}
+
+### Question 3: Measure similarity of businesses that you group in the previous question.
+
+Using the features such as product services, country, role/type and adjacency matrix, we measure companies in the identified groups by calculating cosine similarities. We can visualize the similarity matrix of pairwise similarity score with a heatmap.
+
+![Heatmap of pairwise similarity score (e.g. cosine similarity)](q3.png){fig-align="center"}
 
 # Dataset
 
@@ -39,32 +72,6 @@ Dataset contains the knowledge graph with 27,622 nodes and 24,038 edges:
 
 -   role - The subset of the \"type\" node, not in every edge attribute.
 
-# Related works
+# Related works:
 
-https://link.springer.com/content/pdf/10.1038/s41598-017-06322-9.pdf
-
-# Approach and Shiny App Prototype
-
-### Question 1: Use visual analytics to identify anomalies in the business groups present in the knowledge graph.
-
-Based on the product services, we will filter out companies who are involved in fishing related services. We can classify them into different business groups based on certain features and use network graph to plot the relationship of the entities (companies, beneficial owners, and workers) for each business type. Different centrality measures such as degree, betweenness and eigenvector centrality can be performed, from which an overall score to evaluate the importance of the node. The score could be used to determine the size of the node.
-
-![Main knowledge graph grouped by certain features](Q1.%20Network%20graph.png){fig-align="center" width="588"}
-
-Ownership network: we can construct a graph with the firms as the nodes and the links as ownership relation. We expect to observe weakly connected component capturing the majority of corporations in the network as well as a bow-tie structure featuring smaller strongly connected component, which is of interest to us.
-
-![Example of a ownership graph](q1.png){fig-align="center" width="566"}
-
-The above image is taken from [Open Ownership](https://www.openownership.org/en/news/connecting-beneficial-ownership-peps-and-sanctions-data-with-openscreening/).
-
-### Question 2: Develop a visual analytics process to find similar businesses and group them. This analysis should focus on a business\'s most important features and present those features clearly to the user.
-
-We can perform community detection to identify clusters or groups with the knowledge graph for different business types. We could pick out the leader of the node in each community and plot its ego-network graph to see its activities with other companies.
-
-![View all or individual communities using side bar navigation](Question2.PNG){fig-align="center" width="597"}
-
-### Question 3: Measure similarity of businesses that you group in the previous question.
-
-Using the features such as product services, country, role/type and adjacency matrix, we measure companies in the identified groups by calculating cosine similarities. We can visualize the similarity matrix of pairwise similarity score with a heatmap
-
-![Heatmap of pairwise similarity score (e.g. cosine similarity)](q3.png){fig-align="center"}
+1.  Garcia-Bernardo, Javier, Jan Fichtner, Frank W. Takes, and Eelke M.Heemskerk. 2017. \"Uncovering Offshore Financial Centers: Conduitsand Sinks in the Global Corporate Ownership Network.\"*Scientific Reports* 7 (1). <https://doi.org/10.1038/s41598-017-06322-9>.

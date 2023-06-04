@@ -21,6 +21,25 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1.6em;
   vertical-align: middle;
 }
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
 </style>
 
 
@@ -108,14 +127,15 @@ ul.task-list li input[type="checkbox"] {
    
   <ul>
   <li><a href="#motivation" id="toc-motivation" class="nav-link active" data-scroll-target="#motivation">Motivation</a></li>
-  <li><a href="#dataset" id="toc-dataset" class="nav-link" data-scroll-target="#dataset">Dataset</a></li>
-  <li><a href="#related-works" id="toc-related-works" class="nav-link" data-scroll-target="#related-works">Related works</a></li>
+  <li><a href="#possible-obstacle" id="toc-possible-obstacle" class="nav-link" data-scroll-target="#possible-obstacle">Possible obstacle</a></li>
   <li><a href="#approach-and-shiny-app-prototype" id="toc-approach-and-shiny-app-prototype" class="nav-link" data-scroll-target="#approach-and-shiny-app-prototype">Approach and Shiny App Prototype</a>
   <ul class="collapse">
   <li><a href="#question-1-use-visual-analytics-to-identify-anomalies-in-the-business-groups-present-in-the-knowledge-graph." id="toc-question-1-use-visual-analytics-to-identify-anomalies-in-the-business-groups-present-in-the-knowledge-graph." class="nav-link" data-scroll-target="#question-1-use-visual-analytics-to-identify-anomalies-in-the-business-groups-present-in-the-knowledge-graph.">Question 1: Use visual analytics to identify anomalies in the business groups present in the knowledge graph.</a></li>
   <li><a href="#question-2-develop-a-visual-analytics-process-to-find-similar-businesses-and-group-them.-this-analysis-should-focus-on-a-businesss-most-important-features-and-present-those-features-clearly-to-the-user." id="toc-question-2-develop-a-visual-analytics-process-to-find-similar-businesses-and-group-them.-this-analysis-should-focus-on-a-businesss-most-important-features-and-present-those-features-clearly-to-the-user." class="nav-link" data-scroll-target="#question-2-develop-a-visual-analytics-process-to-find-similar-businesses-and-group-them.-this-analysis-should-focus-on-a-businesss-most-important-features-and-present-those-features-clearly-to-the-user.">Question 2: Develop a visual analytics process to find similar businesses and group them. This analysis should focus on a business's most important features and present those features clearly to the user.</a></li>
   <li><a href="#question-3-measure-similarity-of-businesses-that-you-group-in-the-previous-question." id="toc-question-3-measure-similarity-of-businesses-that-you-group-in-the-previous-question." class="nav-link" data-scroll-target="#question-3-measure-similarity-of-businesses-that-you-group-in-the-previous-question.">Question 3: Measure similarity of businesses that you group in the previous question.</a></li>
   </ul></li>
+  <li><a href="#dataset" id="toc-dataset" class="nav-link" data-scroll-target="#dataset">Dataset</a></li>
+  <li><a href="#related-works" id="toc-related-works" class="nav-link" data-scroll-target="#related-works">Related works:</a></li>
   </ul>
 </nav>
     </div>
@@ -150,6 +170,52 @@ ul.task-list li input[type="checkbox"] {
 <p>FishEye International, a non-profit organization dedicated to combatting the scourge of illegal, unreported and unregulated (IUU) fishing, has been granted access to fishing-related companies’ financial database, offered by an international finance corporation. Through their previous investigations, FishEye has discovered that companies with unusual arrangements are more likely to be engaged in IUU activities or other questionable practices. To leverage this valuable resource, FishEye has transformed the database into a comprehensive knowledge graph, which encompasses data on companies, owners, workers and revenue.</p>
 <p>The primary objective of our project is to employ this graph to detect irregularities that may indicate a company’s involvement in IUU fishing.</p>
 </section>
+<section id="possible-obstacle" class="level1">
+<h1>Possible obstacle</h1>
+<p>Big and unclean data:</p>
+<p>Undirected graph: need to infer the relationship direction if needed</p>
+</section>
+<section id="approach-and-shiny-app-prototype" class="level1">
+<h1>Approach and Shiny App Prototype</h1>
+<section id="question-1-use-visual-analytics-to-identify-anomalies-in-the-business-groups-present-in-the-knowledge-graph." class="level3">
+<h3 class="anchored" data-anchor-id="question-1-use-visual-analytics-to-identify-anomalies-in-the-business-groups-present-in-the-knowledge-graph.">Question 1: Use visual analytics to identify anomalies in the business groups present in the knowledge graph.</h3>
+<p>Based on the product services, we will filter out companies who are involved in fishing related services. We can classify them into different business groups based on certain features and use network graph to plot the relationship of the entities (companies, beneficial owners, and workers) for each business type. Different centrality measures such as degree, betweenness and eigenvector centrality can be performed, from which an overall score to evaluate the importance of the node. The score could be used to determine the size of the node.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="Q1. Network graph.png" class="img-fluid figure-img" width="588"></p>
+<p></p><figcaption class="figure-caption">Main knowledge graph grouped by certain features</figcaption><p></p>
+</figure>
+</div>
+<p>Ownership network: we can construct a graph with the firms as the nodes and the links as ownership relation. We expect to observe weakly connected component capturing the majority of corporations in the network as well as a bow-tie structure featuring smaller strongly connected component, which is of interest to us. <span class="citation" data-cites="garcia-bernardo2017">(<a href="#ref-garcia-bernardo2017" role="doc-biblioref">Garcia-Bernardo et al. 2017</a>)</span></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="q1.png" class="img-fluid figure-img" width="566"></p>
+<p></p><figcaption class="figure-caption">Example of a ownership graph</figcaption><p></p>
+</figure>
+</div>
+<p>The above image is taken from <a href="https://www.openownership.org/en/news/connecting-beneficial-ownership-peps-and-sanctions-data-with-openscreening/">Open Ownership</a>.</p>
+</section>
+<section id="question-2-develop-a-visual-analytics-process-to-find-similar-businesses-and-group-them.-this-analysis-should-focus-on-a-businesss-most-important-features-and-present-those-features-clearly-to-the-user." class="level3">
+<h3 class="anchored" data-anchor-id="question-2-develop-a-visual-analytics-process-to-find-similar-businesses-and-group-them.-this-analysis-should-focus-on-a-businesss-most-important-features-and-present-those-features-clearly-to-the-user.">Question 2: Develop a visual analytics process to find similar businesses and group them. This analysis should focus on a business's most important features and present those features clearly to the user.</h3>
+<p>We can perform community detection to identify clusters or groups with the knowledge graph for different business types. We could pick out the leader of the node in each community and plot its ego-network graph to see its activities with other companies.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="Question2.PNG" class="img-fluid figure-img" width="597"></p>
+<p></p><figcaption class="figure-caption">View all or individual communities using side bar navigation</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="question-3-measure-similarity-of-businesses-that-you-group-in-the-previous-question." class="level3">
+<h3 class="anchored" data-anchor-id="question-3-measure-similarity-of-businesses-that-you-group-in-the-previous-question.">Question 3: Measure similarity of businesses that you group in the previous question.</h3>
+<p>Using the features such as product services, country, role/type and adjacency matrix, we measure companies in the identified groups by calculating cosine similarities. We can visualize the similarity matrix of pairwise similarity score with a heatmap.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="q3.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Heatmap of pairwise similarity score (e.g.&nbsp;cosine similarity)</figcaption><p></p>
+</figure>
+</div>
+</section>
+</section>
 <section id="dataset" class="level1">
 <h1>Dataset</h1>
 <p>Dataset contains the knowledge graph with 27,622 nodes and 24,038 edges:</p>
@@ -172,54 +238,20 @@ ul.task-list li input[type="checkbox"] {
 </ul>
 </section>
 <section id="related-works" class="level1">
-<h1>Related works</h1>
-<p>https://link.springer.com/content/pdf/10.1038/s41598-017-06322-9.pdf</p>
-</section>
-<section id="approach-and-shiny-app-prototype" class="level1">
-<h1>Approach and Shiny App Prototype</h1>
-<section id="question-1-use-visual-analytics-to-identify-anomalies-in-the-business-groups-present-in-the-knowledge-graph." class="level3">
-<h3 class="anchored" data-anchor-id="question-1-use-visual-analytics-to-identify-anomalies-in-the-business-groups-present-in-the-knowledge-graph.">Question 1: Use visual analytics to identify anomalies in the business groups present in the knowledge graph.</h3>
-<p>Based on the product services, we will filter out companies who are involved in fishing related services. We can classify them into different business groups based on certain features and use network graph to plot the relationship of the entities (companies, beneficial owners, and workers) for each business type. Different centrality measures such as degree, betweenness and eigenvector centrality can be performed, from which an overall score to evaluate the importance of the node. The score could be used to determine the size of the node.</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="Q1. Network graph.png" class="img-fluid figure-img" width="588"></p>
-<p></p><figcaption class="figure-caption">Main knowledge graph grouped by certain features</figcaption><p></p>
-</figure>
-</div>
-<p>Ownership network: we can construct a graph with the firms as the nodes and the links as ownership relation. We expect to observe weakly connected component capturing the majority of corporations in the network as well as a bow-tie structure featuring smaller strongly connected component, which is of interest to us.</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="q1.png" class="img-fluid figure-img" width="566"></p>
-<p></p><figcaption class="figure-caption">Example of a ownership graph (taken from Open Ownership)</figcaption><p></p>
-</figure>
-</div>
-<p>The above image is taken from <a href="https://www.openownership.org/en/news/connecting-beneficial-ownership-peps-and-sanctions-data-with-openscreening/">Open Ownership</a>.</p>
-</section>
-<section id="question-2-develop-a-visual-analytics-process-to-find-similar-businesses-and-group-them.-this-analysis-should-focus-on-a-businesss-most-important-features-and-present-those-features-clearly-to-the-user." class="level3">
-<h3 class="anchored" data-anchor-id="question-2-develop-a-visual-analytics-process-to-find-similar-businesses-and-group-them.-this-analysis-should-focus-on-a-businesss-most-important-features-and-present-those-features-clearly-to-the-user.">Question 2: Develop a visual analytics process to find similar businesses and group them. This analysis should focus on a business's most important features and present those features clearly to the user.</h3>
-<p>We can perform community detection to identify clusters or groups with the knowledge graph for different business types. We could pick out the leader of the node in each community and plot its ego-network graph to see its activities with other companies.</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="Question2.PNG" class="img-fluid figure-img" width="597"></p>
-<p></p><figcaption class="figure-caption">View all or individual communities using side bar navigation</figcaption><p></p>
-</figure>
-</div>
-</section>
-<section id="question-3-measure-similarity-of-businesses-that-you-group-in-the-previous-question." class="level3">
-<h3 class="anchored" data-anchor-id="question-3-measure-similarity-of-businesses-that-you-group-in-the-previous-question.">Question 3: Measure similarity of businesses that you group in the previous question.</h3>
-<p>Using the features such as product services, country, role/type and adjacency matrix, we measure companies in the identified groups by calculating cosine similarities. We can visualize the similarity matrix of pairwise similarity score with a heatmap</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="q3.png" class="img-fluid figure-img"></p>
-<p></p><figcaption class="figure-caption">Heatmap of pairwise similarity score (e.g.&nbsp;cosine similarity)</figcaption><p></p>
-</figure>
-</div>
+<h1>Related works:</h1>
+<ol type="1">
+<li>Garcia-Bernardo, Javier, Jan Fichtner, Frank W. Takes, and Eelke M.Heemskerk. 2017. "Uncovering Offshore Financial Centers: Conduitsand Sinks in the Global Corporate Ownership Network."<em>Scientific Reports</em> 7 (1). <a href="https://doi.org/10.1038/s41598-017-06322-9" class="uri">https://doi.org/10.1038/s41598-017-06322-9</a>.</li>
+</ol>
+
 
 
 </section>
-</section>
 
-</main> <!-- /main -->
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" role="doc-bibliography">
+<div id="ref-garcia-bernardo2017" class="csl-entry" role="doc-biblioentry">
+Garcia-Bernardo, Javier, Jan Fichtner, Frank W. Takes, and Eelke M. Heemskerk. 2017. <span>“Uncovering Offshore Financial Centers: Conduits and Sinks in the Global Corporate Ownership Network.”</span> <em>Scientific Reports</em> 7 (1). <a href="https://doi.org/10.1038/s41598-017-06322-9">https://doi.org/10.1038/s41598-017-06322-9</a>.
+</div>
+</div></section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
