@@ -1,5 +1,6 @@
 ---
-title: "Proposal"
+title: "Proposal: Vast Challenge 2023 - Mini Challenge 3"
+date: "4th June 2023"
 ---
 
 # Motivation
