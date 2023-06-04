@@ -71,7 +71,3 @@ Dataset contains the knowledge graph with 27,622 nodes and 24,038 edges:
 -   dataset -- Always \"MC3\".
 
 -   role - The subset of the \"type\" node, not in every edge attribute.
-
-# Related works:
-
-1.  Garcia-Bernardo, Javier, Jan Fichtner, Frank W. Takes, and Eelke M.Heemskerk. 2017. \"Uncovering Offshore Financial Centers: Conduitsand Sinks in the Global Corporate Ownership Network.\"*Scientific Reports* 7 (1). <https://doi.org/10.1038/s41598-017-06322-9>.
