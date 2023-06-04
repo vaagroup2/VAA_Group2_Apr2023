@@ -20,6 +20,69 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1.6em;
   vertical-align: middle;
 }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { color: #008000; } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { color: #008000; font-weight: bold; } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
 </style>
 
 
@@ -107,10 +170,16 @@ ul.task-list li input[type="checkbox"] {
    
   <ul>
   <li><a href="#motivation" id="toc-motivation" class="nav-link active" data-scroll-target="#motivation">Motivation</a></li>
-  <li><a href="#objective" id="toc-objective" class="nav-link" data-scroll-target="#objective">Objective</a></li>
+  <li><a href="#dataset" id="toc-dataset" class="nav-link" data-scroll-target="#dataset">Dataset</a></li>
   <li><a href="#related-works" id="toc-related-works" class="nav-link" data-scroll-target="#related-works">Related works</a></li>
-  <li><a href="#approach" id="toc-approach" class="nav-link" data-scroll-target="#approach">Approach</a></li>
-  <li><a href="#shiny-app-prototype" id="toc-shiny-app-prototype" class="nav-link" data-scroll-target="#shiny-app-prototype">Shiny App Prototype</a></li>
+  <li><a href="#approach-and-shiny-app-prototype" id="toc-approach-and-shiny-app-prototype" class="nav-link" data-scroll-target="#approach-and-shiny-app-prototype">Approach and Shiny App Prototype</a>
+  <ul class="collapse">
+  <li><a href="#question-1-use-visual-analytics-to-identify-anomalies-in-the-business-groups-present-in-the-knowledge-graph." id="toc-question-1-use-visual-analytics-to-identify-anomalies-in-the-business-groups-present-in-the-knowledge-graph." class="nav-link" data-scroll-target="#question-1-use-visual-analytics-to-identify-anomalies-in-the-business-groups-present-in-the-knowledge-graph.">Question 1: Use visual analytics to identify anomalies in the business groups present in the knowledge graph.</a></li>
+  <li><a href="#section" id="toc-section" class="nav-link" data-scroll-target="#section"></a></li>
+  <li><a href="#question-2-develop-a-visual-analytics-process-to-find-similar-businesses-and-group-them.-this-analysis-should-focus-on-a-businesss-most-important-features-and-present-those-features-clearly-to-the-user." id="toc-question-2-develop-a-visual-analytics-process-to-find-similar-businesses-and-group-them.-this-analysis-should-focus-on-a-businesss-most-important-features-and-present-those-features-clearly-to-the-user." class="nav-link" data-scroll-target="#question-2-develop-a-visual-analytics-process-to-find-similar-businesses-and-group-them.-this-analysis-should-focus-on-a-businesss-most-important-features-and-present-those-features-clearly-to-the-user.">Question 2: Develop a visual analytics process to find similar businesses and group them. This analysis should focus on a business's most important features and present those features clearly to the user.</a></li>
+  <li><a href="#section-1" id="toc-section-1" class="nav-link" data-scroll-target="#section-1"></a></li>
+  <li><a href="#question-3-measure-similarity-of-businesses-that-you-group-in-the-previous-question." id="toc-question-3-measure-similarity-of-businesses-that-you-group-in-the-previous-question." class="nav-link" data-scroll-target="#question-3-measure-similarity-of-businesses-that-you-group-in-the-previous-question.">Question 3: Measure similarity of businesses that you group in the previous question.</a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
@@ -136,20 +205,43 @@ ul.task-list li input[type="checkbox"] {
 
 <section id="motivation" class="level1">
 <h1>Motivation</h1>
+<p>FishEye International, a non-profit organization dedicated to combatting the scourge of illegal, unreported and unregulated (IUU) fishing, has been granted access to fishing-related companies’ financial database, offered by an international finance corporation. Through their previous investigations, FishEye has discovered that companies with unusual arrangements are more likely to be engaged in IUU activities or other questionable practices. To leverage this valuable resource, FishEye has transformed the database into a comprehensive knowledge graph, which encompasses data on companies, owners, workers and revenue.</p>
+<p>The primary objective of our project is to employ this graph to detect irregularities that may indicate a company’s involvement in IUU fishing.</p>
 </section>
-<section id="objective" class="level1">
-<h1>Objective</h1>
+<section id="dataset" class="level1">
+<h1>Dataset</h1>
+<p>Dataset contains the knowledge graph with 27,622 nodes and 24,038 edges:</p>
+<p><strong>Node Attributes:</strong> • type – Type of node as defined above. • country – Country associated with the entity. This can be a full country or a two-letter country code. • product_services – Description of product services that the "id" node does. • revenue_omu – Operating revenue of the "id" node in Oceanus Monetary Units. • id – Identifier of the node is also the name of the entry. • role – The subset of the "type" node, not in every node attribute.</p>
+<p><strong>Edge Attributes:</strong> • type – Type of the edge as defined above. • source – ID of the source node. • target – ID of the target node. • dataset – Always "MC3". • role - The subset of the "type" node, not in every edge attribute.</p>
 </section>
 <section id="related-works" class="level1">
 <h1>Related works</h1>
 </section>
-<section id="approach" class="level1">
-<h1>Approach</h1>
+<section id="approach-and-shiny-app-prototype" class="level1">
+<h1>Approach and Shiny App Prototype</h1>
+<section id="question-1-use-visual-analytics-to-identify-anomalies-in-the-business-groups-present-in-the-knowledge-graph." class="level3">
+<h3 class="anchored" data-anchor-id="question-1-use-visual-analytics-to-identify-anomalies-in-the-business-groups-present-in-the-knowledge-graph.">Question 1: Use visual analytics to identify anomalies in the business groups present in the knowledge graph.</h3>
 </section>
-<section id="shiny-app-prototype" class="level1">
-<h1>Shiny App Prototype</h1>
+<section id="section" class="level3">
+<h3 class="anchored" data-anchor-id="section"></h3>
+</section>
+<section id="question-2-develop-a-visual-analytics-process-to-find-similar-businesses-and-group-them.-this-analysis-should-focus-on-a-businesss-most-important-features-and-present-those-features-clearly-to-the-user." class="level3">
+<h3 class="anchored" data-anchor-id="question-2-develop-a-visual-analytics-process-to-find-similar-businesses-and-group-them.-this-analysis-should-focus-on-a-businesss-most-important-features-and-present-those-features-clearly-to-the-user.">Question 2: Develop a visual analytics process to find similar businesses and group them. This analysis should focus on a business's most important features and present those features clearly to the user.</h3>
+</section>
+<section id="section-1" class="level3">
+<h3 class="anchored" data-anchor-id="section-1"></h3>
+</section>
+<section id="question-3-measure-similarity-of-businesses-that-you-group-in-the-previous-question." class="level3">
+<h3 class="anchored" data-anchor-id="question-3-measure-similarity-of-businesses-that-you-group-in-the-previous-question.">Question 3: Measure similarity of businesses that you group in the previous question.</h3>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>pacman<span class="sc">::</span><span class="fu">p_load</span>(jsonlite, tidyverse)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>MC3<span class="ot">&lt;-</span><span class="fu">fromJSON</span>(<span class="st">'data/MC3.json'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->
