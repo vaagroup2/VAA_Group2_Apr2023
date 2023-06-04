@@ -40,7 +40,7 @@ We can perform community detection to identify clusters or groups with the knowl
 
 Using the features such as product services, country, role/type and adjacency matrix, we measure companies in the identified groups by calculating cosine similarities. We can visualize the similarity matrix of pairwise similarity score with a heatmap.
 
-![Heatmap of pairwise similarity score (e.g. cosine similarity)](q3.png){fig-align="center"}
+![Heatmap of pairwise similarity score (e.g. cosine similarity)[@sadeghi2015]](q3.png){fig-align="center"}
 
 # Dataset
 
