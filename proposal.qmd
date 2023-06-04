@@ -16,8 +16,7 @@ Dataset contains the knowledge graph with 27,622 nodes and 24,038 edges:
 
 -   type -- Type of node as defined above.
 
--   country -- Country associated with the entity. This can be a full country or a two-letter country
-    code.
+-   country -- Country associated with the entity. This can be a full country or a two-letter country code.
 
 -   product_services -- Description of product services that the \"id\" node does.
 
@@ -45,13 +44,19 @@ Dataset contains the knowledge graph with 27,622 nodes and 24,038 edges:
 
 ### Question 1: Use visual analytics to identify anomalies in the business groups present in the knowledge graph.
 
-### 
+Based on the product services, we will filter out companies who are involved in fishing related services and classify them into different business groups. We can use network graph to plot the relationship of the entities (companies, beneficial owners, and workers) for each business type. We will perform different centrality measures such as degree, betweenness and eigenvector centrality, and compute an overall score to evaluate the importance of the node. The score could be used to determine the size of the node in the network graph.
 
 ### Question 2: Develop a visual analytics process to find similar businesses and group them. This analysis should focus on a business\'s most important features and present those features clearly to the user.
 
-### 
+Next, we can also perform community detection to identify clusters or groups with the knowledge graph for different business types. We could pick out the leader of the node in each community and plot its ego-network graph to see its activities with other companies.
+
+![](Question2.PNG){width="633"}
 
 ### Question 3: Measure similarity of businesses that you group in the previous question.
+
+We measure companies with similar product services using cosine similarities, and
+
+Using either Jaccard, Adamic-Adar or SimRank to identify companies with similar connections in relative to other nodes in the overall network graph.
 
 ```{r}
 pacman::p_load(jsonlite, tidyverse)
