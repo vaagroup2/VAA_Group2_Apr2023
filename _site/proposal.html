@@ -21,69 +21,6 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1.6em;
   vertical-align: middle;
 }
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-    color: #aaaaaa;
-  }
-pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
-}
-code span.al { color: #ff0000; font-weight: bold; } /* Alert */
-code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
-code span.at { color: #7d9029; } /* Attribute */
-code span.bn { color: #40a070; } /* BaseN */
-code span.bu { color: #008000; } /* BuiltIn */
-code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
-code span.ch { color: #4070a0; } /* Char */
-code span.cn { color: #880000; } /* Constant */
-code span.co { color: #60a0b0; font-style: italic; } /* Comment */
-code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
-code span.do { color: #ba2121; font-style: italic; } /* Documentation */
-code span.dt { color: #902000; } /* DataType */
-code span.dv { color: #40a070; } /* DecVal */
-code span.er { color: #ff0000; font-weight: bold; } /* Error */
-code span.ex { } /* Extension */
-code span.fl { color: #40a070; } /* Float */
-code span.fu { color: #06287e; } /* Function */
-code span.im { color: #008000; font-weight: bold; } /* Import */
-code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
-code span.kw { color: #007020; font-weight: bold; } /* Keyword */
-code span.op { color: #666666; } /* Operator */
-code span.ot { color: #007020; } /* Other */
-code span.pp { color: #bc7a00; } /* Preprocessor */
-code span.sc { color: #4070a0; } /* SpecialChar */
-code span.ss { color: #bb6688; } /* SpecialString */
-code span.st { color: #4070a0; } /* String */
-code span.va { color: #19177c; } /* Variable */
-code span.vs { color: #4070a0; } /* VerbatimString */
-code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
 </style>
 
 
@@ -236,27 +173,46 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </section>
 <section id="related-works" class="level1">
 <h1>Related works</h1>
+<p>https://link.springer.com/content/pdf/10.1038/s41598-017-06322-9.pdf</p>
 </section>
 <section id="approach-and-shiny-app-prototype" class="level1">
 <h1>Approach and Shiny App Prototype</h1>
 <section id="question-1-use-visual-analytics-to-identify-anomalies-in-the-business-groups-present-in-the-knowledge-graph." class="level3">
 <h3 class="anchored" data-anchor-id="question-1-use-visual-analytics-to-identify-anomalies-in-the-business-groups-present-in-the-knowledge-graph.">Question 1: Use visual analytics to identify anomalies in the business groups present in the knowledge graph.</h3>
-<p>Based on the product services, we will filter out companies who are involved in fishing related services and classify them into different business groups. We can use network graph to plot the relationship of the entities (companies, beneficial owners, and workers) for each business type. We will perform different centrality measures such as degree, betweenness and eigenvector centrality, and compute an overall score to evaluate the importance of the node. The score could be used to determine the size of the node in the network graph.</p>
+<p>Based on the product services, we will filter out companies who are involved in fishing related services. We can classify them into different business groups based on certain features and use network graph to plot the relationship of the entities (companies, beneficial owners, and workers) for each business type. Different centrality measures such as degree, betweenness and eigenvector centrality can be performed, from which an overall score to evaluate the importance of the node. The score could be used to determine the size of the node.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="Q1. Network graph.png" class="img-fluid figure-img" width="588"></p>
+<p></p><figcaption class="figure-caption">Main knowledge graph grouped by certain features</figcaption><p></p>
+</figure>
+</div>
+<p>Ownership network: we can construct a graph with the firms as the nodes and the links as ownership relation. We expect to observe weakly connected component capturing the majority of corporations in the network as well as a bow-tie structure featuring smaller strongly connected component, which is of interest to us.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="q1.png" class="img-fluid figure-img" width="566"></p>
+<p></p><figcaption class="figure-caption">Example of a ownership graph (taken from Open Ownership)</figcaption><p></p>
+</figure>
+</div>
+<p>The above image is taken from <a href="https://www.openownership.org/en/news/connecting-beneficial-ownership-peps-and-sanctions-data-with-openscreening/">Open Ownership</a>.</p>
 </section>
 <section id="question-2-develop-a-visual-analytics-process-to-find-similar-businesses-and-group-them.-this-analysis-should-focus-on-a-businesss-most-important-features-and-present-those-features-clearly-to-the-user." class="level3">
 <h3 class="anchored" data-anchor-id="question-2-develop-a-visual-analytics-process-to-find-similar-businesses-and-group-them.-this-analysis-should-focus-on-a-businesss-most-important-features-and-present-those-features-clearly-to-the-user.">Question 2: Develop a visual analytics process to find similar businesses and group them. This analysis should focus on a business's most important features and present those features clearly to the user.</h3>
-<p>Next, we can also perform community detection to identify clusters or groups with the knowledge graph for different business types. We could pick out the leader of the node in each community and plot its ego-network graph to see its activities with other companies.</p>
-<p><img src="Question2.PNG" class="img-fluid" width="633"></p>
+<p>We can perform community detection to identify clusters or groups with the knowledge graph for different business types. We could pick out the leader of the node in each community and plot its ego-network graph to see its activities with other companies.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="Question2.PNG" class="img-fluid figure-img" width="597"></p>
+<p></p><figcaption class="figure-caption">View all or individual communities using side bar navigation</figcaption><p></p>
+</figure>
+</div>
 </section>
 <section id="question-3-measure-similarity-of-businesses-that-you-group-in-the-previous-question." class="level3">
 <h3 class="anchored" data-anchor-id="question-3-measure-similarity-of-businesses-that-you-group-in-the-previous-question.">Question 3: Measure similarity of businesses that you group in the previous question.</h3>
-<p>We measure companies with similar product services using cosine similarities, and</p>
-<p>Using either Jaccard, Adamic-Adar or SimRank to identify companies with similar connections in relative to other nodes in the overall network graph.</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>pacman<span class="sc">::</span><span class="fu">p_load</span>(jsonlite, tidyverse)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>MC3<span class="ot">&lt;-</span><span class="fu">fromJSON</span>(<span class="st">'data/MC3.json'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Using the features such as product services, country, role/type and adjacency matrix, we measure companies in the identified groups by calculating cosine similarities. We can visualize the similarity matrix of pairwise similarity score with a heatmap</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="q3.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Heatmap of pairwise similarity score (e.g.&nbsp;cosine similarity)</figcaption><p></p>
+</figure>
 </div>
 
 

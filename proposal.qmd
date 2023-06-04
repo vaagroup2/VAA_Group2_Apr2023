@@ -41,29 +41,30 @@ Dataset contains the knowledge graph with 27,622 nodes and 24,038 edges:
 
 # Related works
 
+https://link.springer.com/content/pdf/10.1038/s41598-017-06322-9.pdf
+
 # Approach and Shiny App Prototype
 
 ### Question 1: Use visual analytics to identify anomalies in the business groups present in the knowledge graph.
 
-Based on the product services, we will filter out companies who are involved in fishing related services and classify them into different business groups. We can use network graph to plot the relationship of the entities (companies, beneficial owners, and workers) for each business type. We will perform different centrality measures such as degree, betweenness and eigenvector centrality, and compute an overall score to evaluate the importance of the node. The score could be used to determine the size of the node in the network graph.
+Based on the product services, we will filter out companies who are involved in fishing related services. We can classify them into different business groups based on certain features and use network graph to plot the relationship of the entities (companies, beneficial owners, and workers) for each business type. Different centrality measures such as degree, betweenness and eigenvector centrality can be performed, from which an overall score to evaluate the importance of the node. The score could be used to determine the size of the node.
+
+![Main knowledge graph grouped by certain features](Q1.%20Network%20graph.png){fig-align="center" width="588"}
+
+Ownership network: we can construct a graph with the firms as the nodes and the links as ownership relation. We expect to observe weakly connected component capturing the majority of corporations in the network as well as a bow-tie structure featuring smaller strongly connected component, which is of interest to us.
+
+![Example of a ownership graph (taken from Open Ownership)](q1.png){fig-align="center" width="566"}
+
+The above image is taken from [Open Ownership](https://www.openownership.org/en/news/connecting-beneficial-ownership-peps-and-sanctions-data-with-openscreening/).
 
 ### Question 2: Develop a visual analytics process to find similar businesses and group them. This analysis should focus on a business\'s most important features and present those features clearly to the user.
 
-Next, we can also perform community detection to identify clusters or groups with the knowledge graph for different business types. We could pick out the leader of the node in each community and plot its ego-network graph to see its activities with other companies.
+We can perform community detection to identify clusters or groups with the knowledge graph for different business types. We could pick out the leader of the node in each community and plot its ego-network graph to see its activities with other companies.
 
-![](Question2.PNG){width="633"}
+![View all or individual communities using side bar navigation](Question2.PNG){fig-align="center" width="597"}
 
 ### Question 3: Measure similarity of businesses that you group in the previous question.
 
-We measure companies with similar product services using cosine similarities, and
+Using the features such as product services, country, role/type and adjacency matrix, we measure companies in the identified groups by calculating cosine similarities. We can visualize the similarity matrix of pairwise similarity score with a heatmap
 
-Using either Jaccard, Adamic-Adar or SimRank to identify companies with similar connections in relative to other nodes in the overall network graph.
-
-```{r}
-pacman::p_load(jsonlite, tidyverse)
-
-```
-
-```{r}
-MC3<-fromJSON('data/MC3.json')
-```
+![Heatmap of pairwise similarity score (e.g. cosine similarity)](q3.png){fig-align="center"}
