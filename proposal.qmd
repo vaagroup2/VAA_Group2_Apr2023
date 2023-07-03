@@ -1,5 +1,5 @@
 ---
-title: "Proposal: Vast Challenge 2023 - Mini Challenge 3"
+title: "Proposal: Uncovering illegal, unreported, and unregulated (IUU) through Visual Analytics"
 date: "04/06/2023"
 bibliography: references.bib
 ---
@@ -30,7 +30,7 @@ Ownership network: we can construct a graph with the firms as the nodes and the 
 
 The above image is taken from [Open Ownership](https://www.openownership.org/en/news/connecting-beneficial-ownership-peps-and-sanctions-data-with-openscreening/).
 
-### Question 2: Develop a visual analytics process to find similar businesses and group them. This analysis should focus on a business\'s most important features and present those features clearly to the user.
+### Question 2: Develop a visual analytics process to find similar businesses and group them. This analysis should focus on a business's most important features and present those features clearly to the user.
 
 We can perform community detection to identify clusters or groups with the knowledge graph for different business types. We could pick out the leader of the node in each community and plot its ego-network graph to see its activities with other companies.
 
@@ -56,13 +56,13 @@ Dataset contains the knowledge graph with 27,622 nodes and 24,038 edges:
 
 -   country -- Country associated with the entity. This can be a full country or a two-letter country code.
 
--   product_services -- Description of product services that the \"id\" node does.
+-   product_services -- Description of product services that the "id" node does.
 
--   revenue_omu -- Operating revenue of the \"id\" node in Oceanus Monetary Units.
+-   revenue_omu -- Operating revenue of the "id" node in Oceanus Monetary Units.
 
 -   id -- Identifier of the node is also the name of the entry.
 
--   role -- The subset of the \"type\" node, not in every node attribute.
+-   role -- The subset of the "type" node, not in every node attribute.
 
 **Edge Attributes:**
 
@@ -72,6 +72,6 @@ Dataset contains the knowledge graph with 27,622 nodes and 24,038 edges:
 
 -   target -- ID of the target node.
 
--   dataset -- Always \"MC3\".
+-   dataset -- Always "MC3".
 
--   role - The subset of the \"type\" node, not in every edge attribute.
+-   role - The subset of the "type" node, not in every edge attribute.

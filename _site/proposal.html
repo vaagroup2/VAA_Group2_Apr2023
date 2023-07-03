@@ -8,7 +8,7 @@
 
 <meta name="dcterms.date" content="2023-04-06">
 
-<title>VAA_Group2_Apr2023 - Proposal: Vast Challenge 2023 - Mini Challenge 3</title>
+<title>VAA_Group2_Apr2023 - Proposal: Uncovering illegal, unreported, and unregulated (IUU) through Visual Analytics</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -111,6 +111,12 @@ div.csl-indent {
     <a class="nav-link" href="./about.html">
  <span class="menu-text">About</span></a>
   </li>  
+  <li class="dropdown-header">
+ <span class="menu-text">User Guide</span></li>
+  <li class="dropdown-header">
+ <span class="menu-text">App</span></li>
+  <li class="dropdown-header">
+ <span class="menu-text">Poster</span></li>
 </ul>
               <div id="quarto-search" class="" title="Search"></div>
           </div> <!-- /navcollapse -->
@@ -131,7 +137,7 @@ div.csl-indent {
   <li><a href="#approach-and-shiny-app-prototype" id="toc-approach-and-shiny-app-prototype" class="nav-link" data-scroll-target="#approach-and-shiny-app-prototype">Approach and Shiny App Prototype</a>
   <ul class="collapse">
   <li><a href="#question-1-use-visual-analytics-to-identify-anomalies-in-the-business-groups-present-in-the-knowledge-graph." id="toc-question-1-use-visual-analytics-to-identify-anomalies-in-the-business-groups-present-in-the-knowledge-graph." class="nav-link" data-scroll-target="#question-1-use-visual-analytics-to-identify-anomalies-in-the-business-groups-present-in-the-knowledge-graph.">Question 1: Use visual analytics to identify anomalies in the business groups present in the knowledge graph.</a></li>
-  <li><a href="#question-2-develop-a-visual-analytics-process-to-find-similar-businesses-and-group-them.-this-analysis-should-focus-on-a-businesss-most-important-features-and-present-those-features-clearly-to-the-user." id="toc-question-2-develop-a-visual-analytics-process-to-find-similar-businesses-and-group-them.-this-analysis-should-focus-on-a-businesss-most-important-features-and-present-those-features-clearly-to-the-user." class="nav-link" data-scroll-target="#question-2-develop-a-visual-analytics-process-to-find-similar-businesses-and-group-them.-this-analysis-should-focus-on-a-businesss-most-important-features-and-present-those-features-clearly-to-the-user.">Question 2: Develop a visual analytics process to find similar businesses and group them. This analysis should focus on a business's most important features and present those features clearly to the user.</a></li>
+  <li><a href="#question-2-develop-a-visual-analytics-process-to-find-similar-businesses-and-group-them.-this-analysis-should-focus-on-a-businesss-most-important-features-and-present-those-features-clearly-to-the-user." id="toc-question-2-develop-a-visual-analytics-process-to-find-similar-businesses-and-group-them.-this-analysis-should-focus-on-a-businesss-most-important-features-and-present-those-features-clearly-to-the-user." class="nav-link" data-scroll-target="#question-2-develop-a-visual-analytics-process-to-find-similar-businesses-and-group-them.-this-analysis-should-focus-on-a-businesss-most-important-features-and-present-those-features-clearly-to-the-user.">Question 2: Develop a visual analytics process to find similar businesses and group them. This analysis should focus on a business’s most important features and present those features clearly to the user.</a></li>
   <li><a href="#question-3-measure-similarity-of-businesses-that-you-group-in-the-previous-question." id="toc-question-3-measure-similarity-of-businesses-that-you-group-in-the-previous-question." class="nav-link" data-scroll-target="#question-3-measure-similarity-of-businesses-that-you-group-in-the-previous-question.">Question 3: Measure similarity of businesses that you group in the previous question.</a></li>
   </ul></li>
   <li><a href="#dataset" id="toc-dataset" class="nav-link" data-scroll-target="#dataset">Dataset</a></li>
@@ -143,7 +149,7 @@ div.csl-indent {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Proposal: Vast Challenge 2023 - Mini Challenge 3</h1>
+<h1 class="title">Proposal: Uncovering illegal, unreported, and unregulated (IUU) through Visual Analytics</h1>
 </div>
 
 
@@ -195,7 +201,7 @@ div.csl-indent {
 <p>The above image is taken from <a href="https://www.openownership.org/en/news/connecting-beneficial-ownership-peps-and-sanctions-data-with-openscreening/">Open Ownership</a>.</p>
 </section>
 <section id="question-2-develop-a-visual-analytics-process-to-find-similar-businesses-and-group-them.-this-analysis-should-focus-on-a-businesss-most-important-features-and-present-those-features-clearly-to-the-user." class="level3">
-<h3 class="anchored" data-anchor-id="question-2-develop-a-visual-analytics-process-to-find-similar-businesses-and-group-them.-this-analysis-should-focus-on-a-businesss-most-important-features-and-present-those-features-clearly-to-the-user.">Question 2: Develop a visual analytics process to find similar businesses and group them. This analysis should focus on a business's most important features and present those features clearly to the user.</h3>
+<h3 class="anchored" data-anchor-id="question-2-develop-a-visual-analytics-process-to-find-similar-businesses-and-group-them.-this-analysis-should-focus-on-a-businesss-most-important-features-and-present-those-features-clearly-to-the-user.">Question 2: Develop a visual analytics process to find similar businesses and group them. This analysis should focus on a business’s most important features and present those features clearly to the user.</h3>
 <p>We can perform community detection to identify clusters or groups with the knowledge graph for different business types. We could pick out the leader of the node in each community and plot its ego-network graph to see its activities with other companies.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -229,18 +235,18 @@ div.csl-indent {
 <ul>
 <li><p>type – Type of node as defined above.</p></li>
 <li><p>country – Country associated with the entity. This can be a full country or a two-letter country code.</p></li>
-<li><p>product_services – Description of product services that the "id" node does.</p></li>
-<li><p>revenue_omu – Operating revenue of the "id" node in Oceanus Monetary Units.</p></li>
+<li><p>product_services – Description of product services that the “id” node does.</p></li>
+<li><p>revenue_omu – Operating revenue of the “id” node in Oceanus Monetary Units.</p></li>
 <li><p>id – Identifier of the node is also the name of the entry.</p></li>
-<li><p>role – The subset of the "type" node, not in every node attribute.</p></li>
+<li><p>role – The subset of the “type” node, not in every node attribute.</p></li>
 </ul>
 <p><strong>Edge Attributes:</strong></p>
 <ul>
 <li><p>type – Type of the edge as defined above.</p></li>
 <li><p>source – ID of the source node.</p></li>
 <li><p>target – ID of the target node.</p></li>
-<li><p>dataset – Always "MC3".</p></li>
-<li><p>role - The subset of the "type" node, not in every edge attribute.</p></li>
+<li><p>dataset – Always “MC3”.</p></li>
+<li><p>role - The subset of the “type” node, not in every edge attribute.</p></li>
 </ul>
 
 
