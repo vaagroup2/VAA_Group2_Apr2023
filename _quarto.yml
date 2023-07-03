@@ -9,10 +9,9 @@ website:
         text: Home
       - text: Proposal
         href: proposal.qmd
-      - about.qmd
       - text: App
         href: https://vaagroup2apr2023.shinyapps.io/vaa_project/
-
+      - about.qmd
 format:
   html:
     theme: flatly
