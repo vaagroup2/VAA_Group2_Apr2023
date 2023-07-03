@@ -10,6 +10,10 @@ website:
       - text: Proposal
         href: proposal.qmd
       - about.qmd
+      - text: User Guide
+      - text: App
+        #href: 
+      - text: Poster
 
 format:
   html:
