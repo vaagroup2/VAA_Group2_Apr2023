@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.2.475">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="dcterms.date" content="2023-04-06">
+
+<title>VAA_Group2_Apr2023 - Proposal: Uncovering illegal, unreported, and unregulated (IUU) through Visual Analytics</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1.6em;
+  vertical-align: middle;
+}
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit"
+  }
+}</script>
+<script src="site_libs/htmlwidgets-1.6.2/htmlwidgets.js"></script>
+<script src="site_libs/plotly-binding-4.10.1/plotly.js"></script>
+<script src="site_libs/typedarray-0.1/typedarray.min.js"></script>
+<script src="site_libs/jquery-3.5.1/jquery.min.js"></script>
+<link href="site_libs/crosstalk-1.2.0/css/crosstalk.min.css" rel="stylesheet">
+<script src="site_libs/crosstalk-1.2.0/js/crosstalk.min.js"></script>
+<link href="site_libs/plotly-htmlwidgets-css-2.11.1/plotly-htmlwidgets.css" rel="stylesheet">
+<script src="site_libs/plotly-main-2.11.1/plotly-latest.min.js"></script>
+
+
+<link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container">
+    <a class="navbar-brand" href="./index.html">
+    <span class="navbar-title">VAA_Group2_Apr2023</span>
+    </a>
+  </div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="./index.html">
+ <span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link active" href="./project_timeline.html" aria-current="page">
+ <span class="menu-text">Proposal</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="https://vaagroup2apr2023.shinyapps.io/vaa_project/">
+ <span class="menu-text">App</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./about.html">
+ <span class="menu-text">About</span></a>
+  </li>  
+</ul>
+              <div id="quarto-search" class="" title="Search"></div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#motivation" id="toc-motivation" class="nav-link active" data-scroll-target="#motivation">Motivation</a></li>
+  <li><a href="#possible-obstacles" id="toc-possible-obstacles" class="nav-link" data-scroll-target="#possible-obstacles">Possible obstacles</a></li>
+  <li><a href="#approach-and-shiny-app-prototype" id="toc-approach-and-shiny-app-prototype" class="nav-link" data-scroll-target="#approach-and-shiny-app-prototype">Approach and Shiny App Prototype</a>
+  <ul class="collapse">
+  <li><a href="#question-1-use-visual-analytics-to-identify-anomalies-in-the-business-groups-present-in-the-knowledge-graph." id="toc-question-1-use-visual-analytics-to-identify-anomalies-in-the-business-groups-present-in-the-knowledge-graph." class="nav-link" data-scroll-target="#question-1-use-visual-analytics-to-identify-anomalies-in-the-business-groups-present-in-the-knowledge-graph.">Question 1: Use visual analytics to identify anomalies in the business groups present in the knowledge graph.</a></li>
+  <li><a href="#question-2-develop-a-visual-analytics-process-to-find-similar-businesses-and-group-them.-this-analysis-should-focus-on-a-businesss-most-important-features-and-present-those-features-clearly-to-the-user." id="toc-question-2-develop-a-visual-analytics-process-to-find-similar-businesses-and-group-them.-this-analysis-should-focus-on-a-businesss-most-important-features-and-present-those-features-clearly-to-the-user." class="nav-link" data-scroll-target="#question-2-develop-a-visual-analytics-process-to-find-similar-businesses-and-group-them.-this-analysis-should-focus-on-a-businesss-most-important-features-and-present-those-features-clearly-to-the-user.">Question 2: Develop a visual analytics process to find similar businesses and group them. This analysis should focus on a business’s most important features and present those features clearly to the user.</a></li>
+  <li><a href="#question-3-measure-similarity-of-businesses-that-you-group-in-the-previous-question." id="toc-question-3-measure-similarity-of-businesses-that-you-group-in-the-previous-question." class="nav-link" data-scroll-target="#question-3-measure-similarity-of-businesses-that-you-group-in-the-previous-question.">Question 3: Measure similarity of businesses that you group in the previous question.</a></li>
+  </ul></li>
+  <li><a href="#dataset" id="toc-dataset" class="nav-link" data-scroll-target="#dataset">Dataset</a></li>
+  <li><a href="#project-timeline" id="toc-project-timeline" class="nav-link" data-scroll-target="#project-timeline">Project Timeline</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Proposal: Uncovering illegal, unreported, and unregulated (IUU) through Visual Analytics</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">April 6, 2023</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+
+</header>
+
+<section id="motivation" class="level1">
+<h1>Motivation</h1>
+<p>FishEye International, a non-profit organization dedicated to combatting the scourge of illegal, unreported and unregulated (IUU) fishing, has been granted access to fishing-related companies’ financial database, offered by an international finance corporation. Through their previous investigations, FishEye has discovered that companies with unusual arrangements are more likely to be engaged in IUU activities or other questionable practices. To leverage this valuable resource, FishEye has transformed the database into a comprehensive knowledge graph, which encompasses data on companies, owners, workers and revenue.</p>
+<p>The primary objective of our project is to employ this graph to detect irregularities that may indicate a company’s involvement in IUU fishing.</p>
+</section>
+<section id="possible-obstacles" class="level1">
+<h1>Possible obstacles</h1>
+<p><strong>Big and unclean data:</strong> There are many missing values such as in role type as well as product services. In addition, high number of nodes and edges will lead to very complex graph and require proper filtering in order to visualize the graph relationship clearly without loss of information.</p>
+<p><strong>Undirected graph:</strong> We need to infer the relationship direction if needed.</p>
+</section>
+<section id="approach-and-shiny-app-prototype" class="level1">
+<h1>Approach and Shiny App Prototype</h1>
+<section id="question-1-use-visual-analytics-to-identify-anomalies-in-the-business-groups-present-in-the-knowledge-graph." class="level3">
+<h3 class="anchored" data-anchor-id="question-1-use-visual-analytics-to-identify-anomalies-in-the-business-groups-present-in-the-knowledge-graph.">Question 1: Use visual analytics to identify anomalies in the business groups present in the knowledge graph.</h3>
+<p>Based on the product services, we will filter out companies who are involved in fishing related services. We can classify them into different business groups based on certain features and use network graph to plot the relationship of the entities (companies, beneficial owners, and workers) for each business type. Different centrality measures such as degree, betweenness and eigenvector centrality can be performed, from which an overall score to evaluate the importance of the node. The score could be used to determine the size of the node.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="Q1. Network graph.png" class="img-fluid figure-img" width="588"></p>
+<p></p><figcaption class="figure-caption">Main knowledge graph grouped by certain features</figcaption><p></p>
+</figure>
+</div>
+<p>Ownership network: we can construct a graph with the firms as the nodes and the links as ownership relation. We expect to observe weakly connected component capturing the majority of corporations in the network as well as a bow-tie structure featuring smaller strongly connected component, which is of interest to us. <span class="citation" data-cites="garcia-bernardo2017">(<a href="#ref-garcia-bernardo2017" role="doc-biblioref">Garcia-Bernardo et al. 2017</a>)</span></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="q1.png" class="img-fluid figure-img" width="566"></p>
+<p></p><figcaption class="figure-caption">Example of a ownership graph</figcaption><p></p>
+</figure>
+</div>
+<p>The above image is taken from <a href="https://www.openownership.org/en/news/connecting-beneficial-ownership-peps-and-sanctions-data-with-openscreening/">Open Ownership</a>.</p>
+</section>
+<section id="question-2-develop-a-visual-analytics-process-to-find-similar-businesses-and-group-them.-this-analysis-should-focus-on-a-businesss-most-important-features-and-present-those-features-clearly-to-the-user." class="level3">
+<h3 class="anchored" data-anchor-id="question-2-develop-a-visual-analytics-process-to-find-similar-businesses-and-group-them.-this-analysis-should-focus-on-a-businesss-most-important-features-and-present-those-features-clearly-to-the-user.">Question 2: Develop a visual analytics process to find similar businesses and group them. This analysis should focus on a business’s most important features and present those features clearly to the user.</h3>
+<p>We can perform community detection to identify clusters or groups with the knowledge graph for different business types. We could pick out the leader of the node in each community and plot its ego-network graph to see its activities with other companies.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="Question2.PNG" class="img-fluid figure-img" width="597"></p>
+<p></p><figcaption class="figure-caption">View all or individual communities using side bar navigation</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="question-3-measure-similarity-of-businesses-that-you-group-in-the-previous-question." class="level3">
+<h3 class="anchored" data-anchor-id="question-3-measure-similarity-of-businesses-that-you-group-in-the-previous-question.">Question 3: Measure similarity of businesses that you group in the previous question.</h3>
+<p>Using the features such as product services, country, role/type and adjacency matrix, we measure companies in the identified groups by calculating cosine similarities. We can visualize the similarity matrix of pairwise similarity score with a heatmap.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="q3.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Heatmap of pairwise similarity score (e.g.&nbsp;cosine similarity)<span class="citation" data-cites="sadeghi2015">(<a href="#ref-sadeghi2015" role="doc-biblioref">Sadeghi, McClelland, and Hoffman 2015</a>)</span></figcaption><p></p>
+</figure>
+</div>
+<p>We can also use an interactive graph to visualize similarity clusters by similarity score</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="slider.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">By adjusting the slider which indicate the different degree of cluster similarity score to view which nodes are more similar than the rest</figcaption><p></p>
+</figure>
+</div>
+</section>
+</section>
+<section id="dataset" class="level1">
+<h1>Dataset</h1>
+<p>Dataset contains the knowledge graph with 27,622 nodes and 24,038 edges:</p>
+<p><strong>Node Attributes:</strong></p>
+<ul>
+<li><p>type – Type of node as defined above.</p></li>
+<li><p>country – Country associated with the entity. This can be a full country or a two-letter country code.</p></li>
+<li><p>product_services – Description of product services that the “id” node does.</p></li>
+<li><p>revenue_omu – Operating revenue of the “id” node in Oceanus Monetary Units.</p></li>
+<li><p>id – Identifier of the node is also the name of the entry.</p></li>
+<li><p>role – The subset of the “type” node, not in every node attribute.</p></li>
+</ul>
+<p><strong>Edge Attributes:</strong></p>
+<ul>
+<li><p>type – Type of the edge as defined above.</p></li>
+<li><p>source – ID of the source node.</p></li>
+<li><p>target – ID of the target node.</p></li>
+<li><p>dataset – Always “MC3”.</p></li>
+<li><p>role - The subset of the “type” node, not in every edge attribute.</p></li>
+</ul>
+</section>
+<section id="project-timeline" class="level1">
+<h1>Project Timeline</h1>
+<div class="cell">
+<div class="cell-output-display">
+<div class="plotly html-widget html-fill-item-overflow-hidden html-fill-item" id="htmlwidget-d82ee5808ef758cc6a46" style="width:100%;height:464px;"></div>
+<script type="application/json" data-for="htmlwidget-d82ee5808ef758cc6a46">{"x":{"data":[{"x":[19511,19532,null,19511,19512,null,19511,19512,null,19532,19540,null,19532,19540,null,19539,19540],"y":[6,6,null,5,5,null,4,4,null,3,3,null,2,2,null,1,1],"text":["Start: 2023-06-03<br />Task: Brainstorm ideas<br />End: 19532<br />Task: 6<br />End:  2023-06-24","Start: 2023-06-03<br />Task: Brainstorm ideas<br />End: 19532<br />Task: 6<br />End:  2023-06-24",null,"Start: 2023-06-03<br />Task: Create Netlify/Github account<br />End: 19512<br />Task: 5<br />End:  2023-06-04","Start: 2023-06-03<br />Task: Create Netlify/Github account<br />End: 19512<br />Task: 5<br />End:  2023-06-04",null,"Start: 2023-06-03<br />Task: Proposal<br />End: 19512<br />Task: 4<br />End:  2023-06-04","Start: 2023-06-03<br />Task: Proposal<br />End: 19512<br />Task: 4<br />End:  2023-06-04",null,"Start: 2023-06-24<br />Task: ShinyApp<br />End: 19540<br />Task: 3<br />End:  2023-07-02","Start: 2023-06-24<br />Task: ShinyApp<br />End: 19540<br />Task: 3<br />End:  2023-07-02",null,"Start: 2023-06-24<br />Task: Poster<br />End: 19540<br />Task: 2<br />End:  2023-07-02","Start: 2023-06-24<br />Task: Poster<br />End: 19540<br />Task: 2<br />End:  2023-07-02",null,"Start: 2023-07-01<br />Task: Userguide<br />End: 19540<br />Task: 1<br />End:  2023-07-02","Start: 2023-07-01<br />Task: Userguide<br />End: 19540<br />Task: 1<br />End:  2023-07-02"],"type":"scatter","mode":"lines","line":{"width":37.7952755905512,"color":"rgba(173,216,230,1)","dash":"solid"},"hoveron":"points","showlegend":false,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null,"hoverlabel":{"bgcolor":"white","font":{"color":"black"}}}],"layout":{"margin":{"t":43.7625570776256,"r":7.30593607305936,"b":40.1826484018265,"l":195.068493150685},"plot_bgcolor":"rgba(235,235,235,1)","paper_bgcolor":"rgba(255,255,255,1)","font":{"color":"rgba(0,0,0,1)","family":"","size":14.6118721461187},"title":{"text":"Project Timeline","font":{"color":"rgba(0,0,0,1)","family":"","size":17.5342465753425},"x":0,"xref":"paper"},"xaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[19509.55,19541.45],"tickmode":"array","ticktext":["Jun-05","Jun-12","Jun-19","Jun-26","Jul-03"],"tickvals":[19513,19520,19527,19534,19541],"categoryorder":"array","categoryarray":["Jun-05","Jun-12","Jun-19","Jun-26","Jul-03"],"nticks":null,"ticks":"outside","tickcolor":"rgba(51,51,51,1)","ticklen":3.65296803652968,"tickwidth":0.66417600664176,"showticklabels":true,"tickfont":{"color":"rgba(77,77,77,1)","family":"","size":11.689497716895},"tickangle":-0,"showline":false,"linecolor":null,"linewidth":0,"showgrid":true,"gridcolor":"rgba(255,255,255,1)","gridwidth":0.66417600664176,"zeroline":false,"anchor":"y","title":{"text":"Date","font":{"color":"rgba(0,0,0,1)","family":"","size":14.6118721461187}},"hoverformat":".2f"},"yaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[0.4,6.6],"tickmode":"array","ticktext":["Userguide","Poster","ShinyApp","Proposal","Create Netlify/Github account","Brainstorm ideas"],"tickvals":[1,2,3,4,5,6],"categoryorder":"array","categoryarray":["Userguide","Poster","ShinyApp","Proposal","Create Netlify/Github account","Brainstorm ideas"],"nticks":null,"ticks":"outside","tickcolor":"rgba(51,51,51,1)","ticklen":3.65296803652968,"tickwidth":0.66417600664176,"showticklabels":true,"tickfont":{"color":"rgba(77,77,77,1)","family":"","size":11.689497716895},"tickangle":-0,"showline":false,"linecolor":null,"linewidth":0,"showgrid":true,"gridcolor":"rgba(255,255,255,1)","gridwidth":0.66417600664176,"zeroline":false,"anchor":"x","title":{"text":"Task","font":{"color":"rgba(0,0,0,1)","family":"","size":14.6118721461187}},"hoverformat":".2f"},"shapes":[{"type":"rect","fillcolor":null,"line":{"color":null,"width":0,"linetype":[]},"yref":"paper","xref":"paper","x0":0,"x1":1,"y0":0,"y1":1}],"showlegend":false,"legend":{"bgcolor":"rgba(255,255,255,1)","bordercolor":"transparent","borderwidth":1.88976377952756,"font":{"color":"rgba(0,0,0,1)","family":"","size":11.689497716895}},"hovermode":"x","barmode":"relative","hoverlabel":{"bgcolor":"white","font":{"color":"black"}}},"config":{"doubleClick":"reset","modeBarButtonsToAdd":["hoverclosest","hovercompare"],"showSendToCloud":false},"source":"A","attrs":{"267c683d4b95":{"x":{},"y":{},"xend":{},"yend":{},"text":{},"type":"scatter"}},"cur_data":"267c683d4b95","visdat":{"267c683d4b95":["function (y) ","x"]},"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.2,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
+</div>
+</div>
+
+
+
+</section>
+
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" role="doc-bibliography">
+<div id="ref-garcia-bernardo2017" class="csl-entry" role="doc-biblioentry">
+Garcia-Bernardo, Javier, Jan Fichtner, Frank W. Takes, and Eelke M. Heemskerk. 2017. <span>“Uncovering Offshore Financial Centers: Conduits and Sinks in the Global Corporate Ownership Network.”</span> <em>Scientific Reports</em> 7 (1). <a href="https://doi.org/10.1038/s41598-017-06322-9">https://doi.org/10.1038/s41598-017-06322-9</a>.
+</div>
+<div id="ref-sadeghi2015" class="csl-entry" role="doc-biblioentry">
+Sadeghi, Zahra, James L. McClelland, and Paul Hoffman. 2015. <span>“You Shall Know an Object by the Company It Keeps: An Investigation of Semantic Representations Derived from Object Co-Occurrence in Visual Scenes.”</span> <em>Neuropsychologia</em> 76 (September): 52–61. <a href="https://doi.org/10.1016/j.neuropsychologia.2014.08.031">https://doi.org/10.1016/j.neuropsychologia.2014.08.031</a>.
+</div>
+</div></section></div></main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+</body></html>
