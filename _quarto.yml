@@ -12,7 +12,7 @@ website:
       - about.qmd
       - text: User Guide
       - text: App
-        #href: 
+        href: https://vaagroup2apr2023.shinyapps.io/vaa_project/
       - text: Poster
 
 format:
