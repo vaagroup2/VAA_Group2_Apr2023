@@ -12,6 +12,8 @@ website:
       - text: App
         href: https://vaagroup2apr2023.shinyapps.io/vaa_project/
       - about.qmd
+      - text: User Guide
+        href: NB-WSB-24-ALL.pdf
 format:
   html:
     theme: flatly
