@@ -12,9 +12,9 @@ website:
       - text: App
         href: https://vaagroup2apr2023.shinyapps.io/vaa_project/
       - text: User Guide
-        href: NB-WSB-24-ALL.pdf
+        href: userguide.qmd
       - text: Poster
-        href: NB-WSB-24-ALL.pdf        
+        href: poster.qmd       
       - about.qmd
 format:
   html:
