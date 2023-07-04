@@ -4,13 +4,12 @@ format:
     page-layout: full
 ---
 
-
 ```{=html}
   <body>
-  <object width="100%" height="800" type="application/pdf" data="/poster_VAA_final.pdf?#zoom=200&scrollbar=0&toolbar=1&navpanes=0">
-    <p>Insert your error message here, if the PDF cannot be displayed.</p>
+  <object width="100%" height="600" type="application/pdf" data="/poster_VAA_final.pdf?#zoom=50&scrollbar=0&toolbar=1&navpanes=0">
 </object>
 
   </body>
 ```
----
+
+------------------------------------------------------------------------
