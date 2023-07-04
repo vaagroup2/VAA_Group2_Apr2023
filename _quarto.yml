@@ -11,9 +11,11 @@ website:
         href: project_timeline.qmd
       - text: App
         href: https://vaagroup2apr2023.shinyapps.io/vaa_project/
-      - about.qmd
       - text: User Guide
         href: NB-WSB-24-ALL.pdf
+      - text: Poster
+        href: NB-WSB-24-ALL.pdf        
+      - about.qmd
 format:
   html:
     theme: flatly
